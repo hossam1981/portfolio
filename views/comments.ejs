@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;}
+fieldset {
+                 background: #fafafa;
+                 width: 945px;
+                 height: 200px;
+                 margin: 0px 250px;
+                 padding: 35px 66px;
+                 box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+                 text-transform: capitalize;
+                 display: inline-block;
+                 overflow: auto;
+                 /* overflow: auto; to make text fit the div */
+}
+.delete-btn{
+    margin: 0px 250px;
+}
+ .row-body{
+    background-color: whitesmoke;
+}
+
+textarea, select, input{
+    background-color: gainsboro
+}
+button{
+    float: right;
+}
+  </style>
+    <title>Document</title>
+</head>
+<body>
+<div class=" container">
+    <form method='post' action='/add'>
+
+    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class=" container">
+    <form method='post' action='/add'>
+
+   
+    <h1 class="w3-center">Today's Article</h1><hr>
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+    <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p><b><i class="fa fa-user w3-margin-right"></i>Hossam Elnaggar</b></p><br>
+              <img src="img/mypic.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+            </div>
+        
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+
+                    Full-stack developer. interested in the intersection of technology and financial strategy. with a vast array of knowledge in many different front end and back end languages, responsive frameworks, databases, and best code practices. My objective is simply to be the best web developer that I can be and to contribute to the technology industry all that I know and can do. I am dedicated to perfecting my craft by learning from more seasoned developers. leadership experience and a passion for user experience using web standards.
+
+                    </p>
+            </div>
+          </div>
+
+
+       <!-- <div class="w3-row"> -->
+    <!-- <div class="w3-content w3-container w3-padding-64" id="contact"> -->
+    <!-- <div class="w3-col m6 w3-center-small w3-padding-large"> -->
+            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                    <input
+                        class="w3-input w3-border"
+                        type="text"
+                        placeholder="Name"
+                        required="required"
+                        name="username"></div>
+                        
+                    <div class="w3-half">
+                        <input
+                            class="w3-input w3-border"
+                            type="text"
+                            placeholder="Title"
+                            required="required"
+                            name="Title"></div>
+                    </div>
+                    <textarea
+                        class="w3-input w3-border"
+                        type="text"
+                        placeholder="Message"
+                        required="required"
+                        name="body"></textarea>
+
+  <button class="w3-button w3-black w3-right w3-section" type="submit">  <i class="btn-add fa fa-paper-plane"></i>
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+    
+ 
+
+    <% for(i in result.rows) {%>
+        <!-- <div class='sticky' draggable="true" id=<%= result.rows[i].id %>> -->
+
+<fieldset>
+
+    <div class="row-name"> <%= result.rows[i].username %> :</div>
+
+    <div  class="row-title"> <%= result.rows[i].title %> </div>
+   
+    <div class="row-body"> <%= result.rows[i].body %> </div>
+
+</fieldset>
+            <!-- <p class="page-number"><%= result.rows[i].id %></p> -->
+<!-- 
+ <form method='POST' action='/delete/messages/<%= result.rows[i].id %>'>
+     <button class="btn-delete"> delete </button></form> -->
+
+     <form method='POST' action='/delete/comments/<%= result.rows[i].id %>'> 
+
+     <button class="delete-btn w3-button w3-black w3-center w3-section" type="delete">
+                <i class="btn-add fa fa-ban"></i> Delete  </button>
+                 </form>
+                    </div>
+       
+    <% } %>
+</div>
+</div>
+
+    </div>
+    
+</body>
+</html>
+    
